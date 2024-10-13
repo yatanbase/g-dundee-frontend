@@ -1,0 +1,158 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #00ff91, #003366);
+  color: white;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header Styling */
+.app-header {
+  text-align: center;
+  font-size: 3rem; /* Increased for prominence */
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Subtitle Styling */
+.app-subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out 0.5s forwards; /* Slight delay for effect */
+}
+
+/* Form Container */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Max width for larger screens */
+  animation: slideUp 1.5s ease-out;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+.cta-button {
+  background-color: #00ff91; /* Bright green */
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  background-color: #007b55; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Navbar adjustments */
+.navbar {
+  background-color: #000;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.navbar-item a:hover {
+  color: #00ff91; /* Highlight color on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-list {
+    justify-content: center;
+  }
+  .form-container {
+    width: 95%; /* Full width on smaller screens */
+  }
+  .app-header {
+    font-size: 2.5rem; /* Adjust for smaller screens */
+  }
+  .app-subtitle {
+    font-size: 1.2rem; /* Adjust subtitle size for mobile */
+  }
+}

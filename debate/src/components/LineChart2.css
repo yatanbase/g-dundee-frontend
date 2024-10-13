@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #2c5364);
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(14, 13, 13);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.triple-graph-title {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.chart-container {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
