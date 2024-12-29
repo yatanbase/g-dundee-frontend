@@ -26,7 +26,7 @@ const Home = () => {
         <section style={styles.animationSection}>
           <h2 style={styles.animationTitle}>Explore Our 3D Data Visualizations</h2>
           <div style={styles.animationPlaceholder}>
-            <img src={Data3d} alt="" style={{width:'100%',height:'auto'r}} />
+            <img src={Data3d} alt="" style={{width:'100%',height:'auto'}} />
             {/* Embed 3D animation component here */}
            
           </div>
